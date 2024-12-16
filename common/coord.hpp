@@ -11,6 +11,10 @@ typedef struct COORD2D {
 		return x == o.x && y == o.y;
 	}
 
+	inline bool const operator!=(const COORD2D& o) {
+		return x != o.x || y != o.y;
+	}
+
 	inline bool const operator<(const COORD2D& l) const {
 		return (l.y < y || (l.y == y && l.x < x));
 	}
