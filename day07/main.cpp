@@ -13,6 +13,7 @@ class AoC2024_day07 : public AoC {
   private:
 	std::vector<std::vector<uint64_t>> equations_;
 	uint64_t get_total_calibration_result(const bool part2);
+	bool evaluate_equation(const bool part2, const std::vector<uint64_t>& equation, const size_t idx, uint64_t result);
 };
 
 bool AoC2024_day07::init(const std::vector<std::string> lines) {
@@ -49,7 +50,7 @@ bool AoC2024_day07::init(const std::vector<std::string> lines) {
 	return true;
 }
 
-bool rekurz(const bool part2, const std::vector<uint64_t>& equation, const size_t idx, uint64_t result) {
+bool AoC2024_day07::evaluate_equation(const bool part2, const std::vector<uint64_t>& equation, const size_t idx, uint64_t result) {
 	std::string tmp;
 	uint64_t next, x, count;
 
@@ -61,11 +62,11 @@ bool rekurz(const bool part2, const std::vector<uint64_t>& equation, const size_
 		return false;
 	}
 
-	if (rekurz(part2, equation, idx + 1, result + equation[idx])) {
+	if (evaluate_equation(part2, equation, idx + 1, result + equation[idx])) {
 		return true;
 	}
 
-	if (rekurz(part2, equation, idx + 1, result * equation[idx])) {
+	if (evaluate_equation(part2, equation, idx + 1, result * equation[idx])) {
 		return true;
 	}
 
@@ -78,7 +79,7 @@ bool rekurz(const bool part2, const std::vector<uint64_t>& equation, const size_
 			next *= 10;
 		}
 
-		if (rekurz(part2, equation, idx + 1, next + equation[idx])) {
+		if (evaluate_equation(part2, equation, idx + 1, next + equation[idx])) {
 			return true;
 		}
 	}
@@ -91,11 +92,11 @@ uint64_t AoC2024_day07::get_total_calibration_result(const bool part2) {
 
 	for (size_t i = 0; i < equations_.size(); i++) {
 		if (part2) {
-			if (rekurz(true, equations_[i], 2, equations_[i][1])) {
+			if (evaluate_equation(true, equations_[i], 2, equations_[i][1])) {
 				result += equations_[i][0];
 			}
 		} else {
-			if (rekurz(false, equations_[i], 2, equations_[i][1])) {
+			if (evaluate_equation(false, equations_[i], 2, equations_[i][1])) {
 				result += equations_[i][0];
 			}
 		}
