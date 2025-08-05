@@ -28,7 +28,7 @@ class AoC2024_day06 : public AoC {
 
 bool AoC2024_day06::init(const std::vector<std::string> lines) {
 	bool guard_found = false;
-	uint32_t size = 0;
+	size_t size = 0;
 
 	map_.clear();
 

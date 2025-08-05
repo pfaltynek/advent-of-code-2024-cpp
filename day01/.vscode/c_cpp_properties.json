@@ -55,7 +55,7 @@
 			"browse": {
 				"path": [
 					"c:/tools/mingw64/include",
-					"c:/tools/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include",
+					"c:/tools/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include",
 					"c:/tools/mingw64/x86_64-w64-mingw32/include",
 					"${workspaceRoot}"
 				],

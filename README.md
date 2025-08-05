@@ -2,4 +2,4 @@
 
 see http://adventofcode.com/2024/
 
-built with MinGW64 (gcc 14.1.0)
+built with MinGW64 (gcc 15.1.0)

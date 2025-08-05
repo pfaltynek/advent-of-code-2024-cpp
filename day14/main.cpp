@@ -118,8 +118,6 @@ uint64_t AoC2024_day14::get_xmass_tree(const int64_t steps, const int64_t width,
 		}
 
 		if (print) {
-			std::cout << x << std::endl;
-
 			for (int64_t j = 0; j < height; j++) {
 				for (int64_t i = 0; i < width; i++) {
 					std::cout << map[i][j];
