@@ -1,0 +1,2 @@
+part1:	1476
+part2:	ca,dw,fo,if,ji,kg,ks,oe,ov,sb,ud,vr,xr
