@@ -1,0 +1,54 @@
+{
+	"files": [
+		{
+			"path": "input.txt",
+			"bookmarks": [
+				{
+					"line": 111,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 155,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 165,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 183,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 198,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 230,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 244,
+					"column": 17,
+					"label": ""
+				},
+				{
+					"line": 245,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 275,
+					"column": 18,
+					"label": ""
+				}
+			]
+		}
+	]
+}

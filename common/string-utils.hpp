@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <set>
 
 std::vector<std::string> split(std::string to_split, const std::string& delimiter) {
 	std::vector<std::string> result;
@@ -44,4 +45,22 @@ std::string join(const std::vector<std::string> to_join, const std::string delim
 	return ss.str();
 }
 
+std::string join(const std::set<std::string> to_join, const std::string delimiter) {
+	std::stringstream ss;
+	std::string result;
+
+	ss.clear();
+
+	for(const auto& item : to_join) {
+		ss << item << delimiter;
+	}
+
+	result = ss.str();
+
+	if (result.size()) {
+		result = result.substr(0, result.size() - delimiter.size());
+	}
+
+	return result;
+}
 #endif // _STRING_UTILS_HPP_
